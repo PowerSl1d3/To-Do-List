@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+/*Оформление заголовка страницы*/
+
+#header{
+    font-size: 12vh;
+    font-family: 'Work Sans', serif;
+    padding: 10px;
+    margin: 10px auto 10px auto;
+    text-align: center;
+}
+
+/*Оформление положения раздела добавления новой задачи*/
+
+.new-task-field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+    text-align: center;
+}
+
+/*Оформление текстового поля ввода новой задачи*/
+
+.new-task-field input[type=text] {
+    margin-right: 3vh;
+    height: 30%;
+    width: 20%;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    border: none;
+    border-bottom: 2px solid #6a5071;
+}
+.new-task-field input[type=text]:focus {
+    font-size: 12pt;
+    letter-spacing: 2px;
+    height: 50%;
+    width: 40%;
+    border: 2px solid #6a5071;
+    outline: none;
+    transition: 0s ease opacity .4s, .4s, .4s, .4s;
+}
+
+/*Оформление кнопки добавления новой задачи*/
+
+.border-button {
+    height: 5vh;
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    color: #ffffff;
+    border: 1px solid rgb(200, 182, 215);
+    background: #c8b6d7;
+    font-family: 'Work Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.border-button:before, .border-button:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    box-sizing: border-box;
+}
+.border-button:before {
+    bottom: 0;
+    left: 0;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    transition: 0s ease opacity .8s, .2s, .4s, .6s;
+}
+.border-button:after {
+    top: 0;
+    right: 0;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    transition: 0s ease opacity .4s, .4s, .4s, .4s;
+}
+.border-button:hover:before,
+.border-button:hover:after {
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+}
+.border-button:hover:before {
+    transition: 0s ease opacity 0s, .4s, .4s;
+}
+.border-button:hover:after {
+    transition: 0s ease opacity .4s, .4s, .4s;
+}
+.border-button:hover {
+    background: rgb(184, 113, 245);
+}
+
+/*Оформление списка задач*/
+
+.completed-task {
+    text-decoration: line-through;
+}
+#task-list{
+    width: 50vw;
+    margin: auto;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#task-list li {
+    padding: 2vh;
+    margin: 2vh;
+    font-family: 'Work Sans', serif;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    -webkit-box-shadow: 0 0 4px black;
+}
+
+#task-list li span {
+    flex-grow: 1;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+/*Оформление текст боксов списка задач*/
+
+#task-list li input[type=checkbox] {
+    width: 3vh;
+    height: 3vh;
+    transition: 1s;
+}
+
+#task-list li input[type=checkbox]:checked {
+    width: 3vw;
+    height: 3vh;
+    transition: 1s;
+}
+
